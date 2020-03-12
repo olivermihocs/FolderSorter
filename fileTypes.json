@@ -1,0 +1,12 @@
+{
+    "Images":["png","img","jpeg","jpg","bmp","gif"],
+    "ZIPs":["zip","rar","7z","bz2"],
+    "Torrents":["torrent"],
+    "PDF_Text":["pdf","txt","ps","es3"],
+    "Excel_word_ppt":["ppt","pptx","doc","docx","xls","xlsx"],
+    "Sound files":["mp3"],
+    "Video files":["mp4","mov","mkv","webm"],
+    "Source Codes":["rb","py","java","cpp","h","sh","json","js","sql","conf","ini","log"],
+    "Executables":["exe","bat","jar","msi"],
+    "Weblinks":["html","htm"]
+}
