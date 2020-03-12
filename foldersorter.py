@@ -3,10 +3,12 @@ import os
 import sys
 import json
 import shutil
-
-folder_path = ""
 reload(sys)
 sys.setdefaultencoding('utf-8')
+
+
+folder_path = ""
+dir_path = os.path.dirname(os.path.realpath(__file__))
 
 def exitWithMsg(info):
     if len(info):
@@ -40,7 +42,7 @@ def getUserConfirm(path):
 
 def getFileTypes():
     try:
-        with open('fileTypes.json') as f:
+        with open(os.path.join(dir_path,'fileTypes.json')) as f:
             fileTypes = json.load(f)
             return fileTypes
     except:
@@ -61,13 +63,14 @@ def createDirs(path):
 def updateFolderJSONFile(path):
     data = {}
     data["Folder_path"]=path
-    with open('folder.json', 'w') as f:
+    print(os.path.join(dir_path,'folder.json'))
+    with open(os.path.join(dir_path,'folder.json'), 'w') as f:
         json.dump(data, f)
     print("Successfully updated folder's JSON file.")
 
 def getPathFromJSON():
     try:
-        with open('folder.json') as f:
+        with open(os.path.join(dir_path,'folder.json')) as f:
             data = json.load(f)
     except:
         exitWithMsg("folder.json file is missing from the .py file's directory!")
